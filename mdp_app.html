@@ -34,17 +34,21 @@
           #wrapper {
               margin-top: 40px;
               width: 100%;
-              height: 50vh;
-              display: flex;
           }
           .box{
-              width:33vw;
+              
               flex: 1;
               margin: 5px;
               background-color: #666;
               
           }
-      
+          .img_wrap{
+              width: 100%;
+          }
+          img{
+              width: 100%;
+              
+          }
       </style>
   </head>
   <body>
@@ -53,16 +57,42 @@
         <div id="header" class="text-center">Concierge Recommendations</div>
         
         <div id="wrapper">
-            <div class="box" id="car">CARS</div>
-            <div class="box" id="theatre">THEATRE</div>
-            <div class="box" id="restaurants">RESTAURANTS</div>
+           <div class="card-deck">
+              <div class="card">
+                  <div class="img_wrap">
+                        <img class="card-img-top" src="images/merc.jpg" alt="Mercedes S-Class">
+                    </div>
+                <div class="card-block">
+                  <h4 class="card-title">Chaffeur Driven Cars</h4>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="img_wrap">
+                    <img class="card-img-top" src="images/theatre.jpg" alt="Theatre">
+                  </div>
+                <div class="card-block">
+                  <h4 class="card-title">Theatre Booking</h4>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="img_wrap">
+                    <img class="card-img-top" src="images/restaurant.jpg" alt="Restaurant Reservation">
+                  </div>
+                <div class="card-block">
+                  <h4 class="card-title">Restaurant Reservation</h4>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+              </div>
+            </div>
         </div>
         
       
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
