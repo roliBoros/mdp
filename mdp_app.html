@@ -26,8 +26,11 @@
               background-color: #666;
               color: white;
               font-weight: bold;
-              text-transform: uppercase;
-              
+              margin-top: 60px;
+              font-size: 1.5em;
+              padding-top: 15px;
+              border-top-left-radius: 10px;
+               border-top-right-radius: 10px;
             
           }
           
@@ -49,22 +52,123 @@
               width: 100%;
               
           }
+          
+          .card{
+              border-bottom-left-radius: 15px;
+               border-bottom-right-radius: 15px;
+              margin-bottom: 30px;
+          }
+          
+          
       </style>
   </head>
   <body>
+
+<!-- Modal -->
+<div class="modal fade" id="cars" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Your Transport</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="date">Please Choose Date</label>
+            <input type="date" class="form-control" id="date" aria-describedby="emailHelp" placeholder="Enter date">
+          </div>
+          <div class="form-group">
+            <label for="carType">Car Type</label>
+            <select class="form-control" id="carType">
+              <option>Mercedes S-Class</option>
+              <option>Mercedes E-Class</option>
+              <option>Mercedes Vito</option>
+              <option>Black Cab</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="passenger">Number Of Passengers</label>
+            <select class="form-control" id="passenger">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+            <div class="form-group">
+            <label for="luggage">Number Of Luggage</label>
+            <select class="form-control" id="luggage">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleTextarea">Example textarea</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+          </div>
+          <fieldset class="form-group">
+            <legend>Radio buttons</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+            </div>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+              </label>
+            </div>
+            <div class="form-check disabled">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                Option three is disabled
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
     <div class="container">
       
         <div id="header" class="text-center">Concierge Recommendations</div>
         
         <div id="wrapper">
            <div class="card-deck">
-              <div class="card">
+              <div class="card" id="chaffeur">
                   <div class="img_wrap">
                         <img class="card-img-top" src="images/merc.jpg" alt="Mercedes S-Class">
                     </div>
-                <div class="card-block">
-                  <h4 class="card-title">Chaffeur Driven Cars</h4>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="card-block chaffeur">
+                  <h5 class="card-title text-center">Chaffeur Driven Car</h5>
+                <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
                 </div>
               </div>
               <div class="card">
@@ -72,8 +176,8 @@
                     <img class="card-img-top" src="images/theatre.jpg" alt="Theatre">
                   </div>
                 <div class="card-block">
-                  <h4 class="card-title">Theatre Booking</h4>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                  <h5 class="card-title text-center">Theatre</h5>
+                <!--  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
                 </div>
               </div>
               <div class="card">
@@ -81,8 +185,8 @@
                     <img class="card-img-top" src="images/restaurant.jpg" alt="Restaurant Reservation">
                   </div>
                 <div class="card-block">
-                  <h4 class="card-title">Restaurant Reservation</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <h5 class="card-title text-center">Restaurant</h5>
+                <!--  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
                 </div>
               </div>
             </div>
@@ -92,8 +196,15 @@
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      
+      <script>
+        $(".card").click(function(){
+             $('#cars').modal('show');
+        });
+      
+      </script>
   </body>
 </html>
